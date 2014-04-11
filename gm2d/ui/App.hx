@@ -8,7 +8,7 @@ import gm2d.ui.Dock;
 import gm2d.ui.IDockable;
 import gm2d.ui.Menubar;
 
-import nme.net.SharedObject;
+import flash.net.SharedObject;
 
 
 class App extends Screen
@@ -35,7 +35,7 @@ class App extends Screen
 
       makeCurrent();
 
-      addEventListener(nme.events.Event.RENDER, checkSliderLayouts);
+      addEventListener(flash.events.Event.RENDER, checkSliderLayouts);
 
       doLayout();
    }
@@ -192,7 +192,7 @@ class App extends Screen
 
       if (_menubar==null)
       {
-         #if (waxe && !nme_menu)
+         #if (waxe && !flash_menu)
          _menubar = new WxMenubar(this);
          #else
          _menubar = new SpriteMenubar(this);

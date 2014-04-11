@@ -1,15 +1,15 @@
 package gm2d.ui;
 
-import nme.geom.Rectangle;
-import nme.display.Sprite;
-import nme.display.Shape;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.DisplayObjectContainer;
-import nme.text.TextField;
+import flash.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Shape;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObjectContainer;
+import flash.text.TextField;
 //import gm2d.ui.HitBoxes;
-import nme.geom.Point;
-import nme.events.MouseEvent;
+import flash.geom.Point;
+import flash.events.MouseEvent;
 import gm2d.ui.HitBoxes;
 import gm2d.ui.Dock;
 import gm2d.ui.DockPosition;
@@ -65,9 +65,9 @@ class MDIParent extends Sprite implements IDock implements IDockable
       flags = Dock.RESIZABLE;
 
       mLayout = new GridLayout(1,"MDI");
-      mLayout.setAlignment(Layout.AlignStretch);
+      mLayout.setAligflashnt(Layout.AlignStretch);
       clientLayout = new DisplayLayout(clientArea, clientWidth, clientHeight);
-      clientLayout.setAlignment(Layout.AlignStretch);
+      clientLayout.setAligflashnt(Layout.AlignStretch);
       clientLayout.onLayout = setClientSize;
       mLayout.add(mTabContainer.getLayout());
       mLayout.add( clientLayout );
@@ -208,7 +208,7 @@ class MDIParent extends Sprite implements IDock implements IDockable
    // Display
    public function getTitle():String { return ""; }
    public function getShortTitle():String { return ""; }
-   public function getIcon():nme.display.BitmapData { return null; }
+   public function getIcon():flash.display.BitmapData { return null; }
    public function getFlags():Int { return flags; }
    public function setFlags(inFlags:Int):Void { flags = inFlags; }
    // Layout

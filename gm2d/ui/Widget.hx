@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.display.Sprite;
-import nme.display.DisplayObjectContainer;
-import nme.text.TextField;
-import nme.geom.Point;
-import nme.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.DisplayObjectContainer;
+import flash.text.TextField;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import gm2d.ui.Layout;
 import gm2d.ui.HitBoxes;
 import gm2d.skin.Skin;
@@ -143,7 +143,7 @@ class Widget extends Sprite
          mChrome.removeChildAt(0);
    }
 
-   public function onKeyDown(event:nme.events.KeyboardEvent ) : Bool { return false; }
+   public function onKeyDown(event:flash.events.KeyboardEvent ) : Bool { return false; }
 
    // public function layout(inW:Float,inH:Float):Void { }
 

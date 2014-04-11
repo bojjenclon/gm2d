@@ -1,12 +1,12 @@
 package gm2d.ui;
 
-import nme.display.DisplayObjectContainer;
-import nme.display.Sprite;
-import nme.display.BitmapData;
+import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
+import flash.display.BitmapData;
 import gm2d.ui.DockPosition;
-import nme.geom.Rectangle;
+import flash.geom.Rectangle;
 import gm2d.skin.Skin;
-import nme.events.MouseEvent;
+import flash.events.MouseEvent;
 import gm2d.ui.HitBoxes;
 
 class ListDock extends SideDock

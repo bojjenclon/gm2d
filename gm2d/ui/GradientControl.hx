@@ -1,22 +1,22 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.BitmapData;
-import nme.display.Shape;
-import nme.display.Sprite;
-import nme.display.Bitmap;
-import nme.display.SpreadMethod;
-import nme.geom.Rectangle;
+import flash.display.DisplayObject;
+import flash.display.BitmapData;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.display.Bitmap;
+import flash.display.SpreadMethod;
+import flash.geom.Rectangle;
 import gm2d.Gradient;
-import nme.text.TextField;
+import flash.text.TextField;
 import gm2d.ui.MouseWatcher;
 import gm2d.ui.Layout;
 import gm2d.ui.HitBoxes;
-import nme.display.GradientType;
-import gm2d.InterpolationMethod;
-import nme.geom.Matrix;
-import nme.geom.Point;
-import nme.events.MouseEvent;
+import flash.display.GradientType;
+import gm2d.Interpolatioflashthod;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.events.MouseEvent;
 import gm2d.skin.Skin;
 import gm2d.skin.Renderer;
 import gm2d.RGBHSV;
@@ -149,7 +149,7 @@ class GradientControl extends Widget
       controls.add(stopControls);
       controls.add(gradLayout);
       controls.setColStretch(1,1);
-      controls.setAlignment(Layout.AlignStretch);
+      controls.setAligflashnt(Layout.AlignStretch);
 
       var swatches = new GridLayout(10);
       swatches.setSpacing(4,4);
@@ -192,7 +192,7 @@ class GradientControl extends Widget
       vstack.add(controls);
       vstack.add(properties);
       vstack.setColStretch(0,1);
-      vstack.setAlignment(Layout.AlignStretch).setSpacing(0,4);
+      vstack.setAligflashnt(Layout.AlignStretch).setSpacing(0,4);
       updateLockout = 0;
 
       setItemLayout(vstack);
@@ -267,7 +267,7 @@ class GradientControl extends Widget
          var key:String = interp + "";
          if (!bitmaps.exists(key))
          {
-            gradient.interpolationMethod = interp;
+            gradient.interpolatioflashthod = interp;
             gfx.clear();
             var bmp = new BitmapData(size,size);
             gfx.lineStyle(1,0x000000);

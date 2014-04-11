@@ -1,15 +1,15 @@
 package gm2d.ui;
 
 import gm2d.ui.Menubar;
-import nme.display.DisplayObjectContainer;
+import flash.display.DisplayObjectContainer;
 import gm2d.ui.DockPosition;
 import gm2d.ui.MouseWatcher;
-import nme.display.Sprite;
+import flash.display.Sprite;
 import gm2d.ui.HitBoxes;
-import nme.events.MouseEvent;
+import flash.events.MouseEvent;
 import gm2d.skin.TabRenderer;
 import gm2d.skin.Skin;
-import nme.geom.Rectangle;
+import flash.geom.Rectangle;
 
 
 class SlideBar extends Sprite implements IDock

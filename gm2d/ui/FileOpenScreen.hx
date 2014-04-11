@@ -2,17 +2,17 @@ package gm2d.ui;
 
 import gm2d.Screen;
 import gm2d.ui.Layout;
-import nme.text.TextField;
+import flash.text.TextField;
 import gm2d.ScreenScaleMode;
-import nme.display.Sprite;
+import flash.display.Sprite;
 import gm2d.skin.Skin;
 
-import nme.display.Graphics;
-import nme.display.Bitmap;
-import nme.geom.Matrix;
+import flash.display.Graphics;
+import flash.display.Bitmap;
+import flash.geom.Matrix;
 
-import nme.display.BitmapData;
-import nme.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
 
 import haxe.io.Path;
 
@@ -20,11 +20,11 @@ import haxe.io.Path;
 // Nothing
 #else
 import sys.FileSystem;
-import nme.filesystem.File;
+import flash.filesystem.File;
 #end
 
-import nme.utils.ByteArray;
-import nme.net.SharedObject;
+import flash.utils.ByteArray;
+import flash.net.SharedObject;
 
 class FileOpenScreen extends Screen
 {
@@ -49,7 +49,7 @@ class FileOpenScreen extends Screen
    var isSave:Bool;
    var saveTextInput:TextInput;
 
-   public function new(inMessage:String,inDir:String,inOnResult:String->ByteArray->Void,inFilter:String,?inReturnScreen:Screen,inFlags:Int = 0, inSaveName="")
+   public function new(iflashssage:String,inDir:String,inOnResult:String->ByteArray->Void,inFilter:String,?inReturnScreen:Screen,inFlags:Int = 0, inSaveName="")
    {
       super();
 
@@ -57,7 +57,7 @@ class FileOpenScreen extends Screen
       throw "FileOpenScreen Not supported on flash";
       #else
       flags = inFlags;
-      message = inMessage;
+      message = iflashssage;
       
       saveName = inSaveName;
       filter = inFilter;
@@ -68,10 +68,10 @@ class FileOpenScreen extends Screen
 
 
       var top = new GridLayout(1,"vlayout",0);
-      top.add(StaticText.createLayout(inMessage,this));
+      top.add(StaticText.createLayout(iflashssage,this));
       top.setColStretch(0,1);
 
-      var dir_buttons = new GridLayout(null,"dir button",0).setAlignment(Layout.AlignLeft);
+      var dir_buttons = new GridLayout(null,"dir button",0).setAligflashnt(Layout.AlignLeft);
       dir_buttons.setSpacing(2,10);
 
       var button = Button.TextButton("All", function() setDir(null) );
@@ -81,8 +81,8 @@ class FileOpenScreen extends Screen
       if (inDir=="")
       {
          var def = SharedObject.getLocal("fileOpen");
-         if (def!=null && Reflect.hasField(def.data,inMessage))
-            inDir = Reflect.field(def.data,inMessage);
+         if (def!=null && Reflect.hasField(def.data,iflashssage))
+            inDir = Reflect.field(def.data,iflashssage);
          else
             inDir = File.documentsDirectory.nativePath;
       }
@@ -143,7 +143,7 @@ class FileOpenScreen extends Screen
          list.addRow( [folderIcon,"Application Files"] );
          dirs.push(File.applicationStorageDirectory.nativePath);
 
-         for(v in nme.filesystem.StorageVolumeInfo.getInstance().getStorageVolumes())
+         for(v in flash.filesystem.StorageVolumeInfo.getInstance().getStorageVolumes())
          {
             list.addRow( [folderIcon,v.name] );
             dirs.push(v.rootDirectory.nativePath);

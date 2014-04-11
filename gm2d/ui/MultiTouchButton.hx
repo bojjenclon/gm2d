@@ -4,11 +4,11 @@ import gm2d.svg.BitmapDataManager;
 import gm2d.reso.Resources;
 import gm2d.svg.SvgRenderer;
 
-import nme.display.Sprite;
-import nme.events.MouseEvent;
-import nme.events.TouchEvent;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.events.TouchEvent;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
 
 
 class MultiTouchButton  extends Sprite
@@ -30,8 +30,8 @@ class MultiTouchButton  extends Sprite
       super();
       onChange = null;
       #if !flash
-      nme.ui.Multitouch.inputMode = nme.ui.MultitouchInputMode.TOUCH_POINT;
-      var addMouseListeners = !nme.ui.Multitouch.supportsTouchEvents;
+      flash.ui.Multitouch.inputMode = flash.ui.MultitouchInputMode.TOUCH_POINT;
+      var addMouseListeners = !flash.ui.Multitouch.supportsTouchEvents;
       #else
       var addMouseListeners = true;
       #end

@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.text.TextField;
-import nme.display.BitmapData;
-import nme.display.Bitmap;
-import nme.events.MouseEvent;
-import nme.geom.Point;
+import flash.text.TextField;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.events.MouseEvent;
+import flash.geom.Point;
 import gm2d.ui.Button;
 import gm2d.ui.Layout;
 import gm2d.skin.Skin;
@@ -115,13 +115,13 @@ class ComboBox extends TextInput
        //mText.x = 0.5;
        //mText.y = 0.5;
        //mText.height = 21;
-       ////mText.autoSize = nme.text.TextFieldAutoSize.NONE;
-       //mText.type = nme.text.TextFieldType.INPUT;
+       ////mText.autoSize = flash.text.TextFieldAutoSize.NONE;
+       //mText.type = flash.text.TextFieldType.INPUT;
  
        if (mBMP==null)
        {
           mBMP = new BitmapData(22,22);
-          var shape = new nme.display.Shape();
+          var shape = new flash.display.Shape();
           var gfx = shape.graphics;
           gfx.beginFill(0xffffff);
           gfx.drawRect(-2,-2,28,28);
@@ -181,7 +181,7 @@ class ComboBox extends TextInput
             new ComboList(this, mRect.width, mDisplay,selectOnMove) :
             new ComboList(this, mRect.width, mOptions,selectOnMove);
 
-      var pos = this.localToGlobal( new nme.geom.Point(0,0) );
+      var pos = this.localToGlobal( new flash.geom.Point(0,0) );
       var h = pop.getControlHeight();
       var w = pop.getControlWidth();
       var max = Std.int(stage.stageHeight/2);
@@ -219,7 +219,7 @@ class ComboBox extends TextInput
        gfx.beginFill(0xf0f0ff);
        gfx.drawRect(0.5,0.5,mRect.width-1,23);
        gfx.lineStyle();
-       var mtx = new nme.geom.Matrix();
+       var mtx = new flash.geom.Matrix();
        mtx.tx = mRect.width-mBMP.width-1;
        mtx.ty = 1;
        gfx.beginBitmapFill(mBMP,mtx);

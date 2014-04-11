@@ -1,15 +1,15 @@
 package gm2d.ui;
 
-import nme.geom.Rectangle;
-import nme.display.Sprite;
-import nme.display.Shape;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.DisplayObjectContainer;
-import nme.text.TextField;
+import flash.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Shape;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObjectContainer;
+import flash.text.TextField;
 //import gm2d.ui.HitBoxes;
-import nme.geom.Point;
-import nme.events.MouseEvent;
+import flash.geom.Point;
+import flash.events.MouseEvent;
 import gm2d.ui.HitBoxes;
 import gm2d.ui.Dock;
 import gm2d.ui.DockPosition;
@@ -38,10 +38,10 @@ class TabBar extends Widget
       tabRenderer = Skin.tabRenderer( ["Tabs","TabRenderer"] );
       var layout = new Layout();
       layout.setMinSize(20,18);
-      layout.setAlignment(Layout.AlignStretch);
+      layout.setAligflashnt(Layout.AlignStretch);
       layout.onLayout = layoutTabs;
       setItemLayout(layout);
-      mLayout.setAlignment(Layout.AlignStretch | Layout.AlignTop);
+      mLayout.setAligflashnt(Layout.AlignStretch | Layout.AlignTop);
       tabsWidth = tabsHeight = 0;
       mHitBoxes = new HitBoxes(this,inOnHitBox);
       build();

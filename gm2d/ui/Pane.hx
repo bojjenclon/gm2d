@@ -1,11 +1,11 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.DisplayObjectContainer;
-import nme.geom.Rectangle;
-import nme.geom.Point;
-import nme.display.Sprite;
-import nme.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.display.DisplayObjectContainer;
+import flash.geom.Rectangle;
+import flash.geom.Point;
+import flash.display.Sprite;
+import flash.display.BitmapData;
 import gm2d.ui.IDockable;
 import gm2d.skin.Skin;
 
@@ -268,7 +268,7 @@ class Pane implements IDockable
    }
 
    
-   public function getDockRect():nme.geom.Rectangle
+   public function getDockRect():flash.geom.Rectangle
    {
       return new Rectangle(posX, posY, sizeX, sizeY );
    }

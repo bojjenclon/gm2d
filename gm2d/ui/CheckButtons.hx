@@ -1,9 +1,9 @@
 package gm2d.ui;
 
-import nme.display.BitmapData;
-import nme.display.Bitmap;
-import nme.display.Shape;
-import nme.display.Sprite;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.display.Shape;
+import flash.display.Sprite;
 import gm2d.ui.Button;
 import gm2d.skin.Skin;
 import gm2d.skin.ButtonRenderer;

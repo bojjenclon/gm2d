@@ -1,8 +1,8 @@
 package gm2d.ui;
 
-import nme.text.TextField;
-import nme.display.BitmapData;
-import nme.events.MouseEvent;
+import flash.text.TextField;
+import flash.display.BitmapData;
+import flash.events.MouseEvent;
 import gm2d.ui.Button;
 import gm2d.ui.Layout;
 import gm2d.skin.Skin;

@@ -2,9 +2,9 @@ package gm2d.ui;
 
 import gm2d.Screen;
 import gm2d.Game;
-import nme.display.BitmapData;
-import nme.display.Graphics;
-import nme.events.MouseEvent;
+import flash.display.BitmapData;
+import flash.display.Graphics;
+import flash.events.MouseEvent;
 import gm2d.ui.Layout;
 
 class PopupMenu extends Window
@@ -38,7 +38,7 @@ class PopupMenu extends Window
                Game.closePopup();
                if (item.onSelect!=null) item.onSelect(item);
                }, ["SimpleButton"]);
-            but.getLayout().setAlignment(Layout.AlignLeft);
+            but.getLayout().setAligflashnt(Layout.AlignLeft);
             but.onCurrentChangedFunc = function(inCurrent:Bool)  { if(inCurrent) me.setItem(id); }
             var l = but.getLabel();
             but.addEventListener(MouseEvent.MOUSE_OVER, function(_) me.setItem(id) );

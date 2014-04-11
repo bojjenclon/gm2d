@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.Shape;
-import nme.display.Sprite;
-import nme.text.TextField;
-import nme.text.TextFormat;
+import flash.display.DisplayObject;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.text.TextField;
+import flash.text.TextFormat;
 import gm2d.ui.Layout;
 import gm2d.skin.Renderer;
 import gm2d.skin.Skin;
@@ -32,7 +32,7 @@ class Panel extends Widget
 
       mGridLayout = new GridLayout(1,"vertical");
       mGridLayout.setSpacing(0,20);
-      mGridLayout.setAlignment(Layout.AlignStretch);
+      mGridLayout.setAligflashnt(Layout.AlignStretch);
       mItemGrid = new GridLayout(2,"items");
       mButtonLayout = new GridLayout(null,"buttons",0);
       mButtonLayout.setSpacing(10,0);
@@ -127,7 +127,7 @@ class Panel extends Widget
    }
 
 
-   public function addObj(inObj:nme.display.DisplayObject,?inAlign:Null<Int>)
+   public function addObj(inObj:flash.display.DisplayObject,?inAlign:Null<Int>)
    {
       mLayoutDirty = true;
       addChild(inObj);

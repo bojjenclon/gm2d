@@ -1,28 +1,28 @@
 package gm2d.ui;
 
-import nme.display.DisplayObjectContainer;
+import flash.display.DisplayObjectContainer;
 
 import gm2d.Screen;
 import gm2d.Game;
-import nme.display.BitmapData;
-import nme.display.Graphics;
-import nme.display.Sprite;
-import nme.text.TextField;
-import nme.events.MouseEvent;
-import nme.text.TextFieldAutoSize;
+import flash.display.BitmapData;
+import flash.display.Graphics;
+import flash.display.Sprite;
+import flash.text.TextField;
+import flash.events.MouseEvent;
+import flash.text.TextFieldAutoSize;
 import gm2d.skin.Skin;
 import gm2d.ui.IDock;
 import gm2d.ui.DockPosition;
 
-#if (waxe && !nme_menu)
+#if (waxe && !flash_menu)
 import wx.Menu;
 #end
 
 interface Menubar
 {
    public function layout(inWidth:Float) : Float;
-   #if (waxe && !nme_menu)
-   public function addItems(inMenu:Menu,inItem:MenuItem) : Void;
+   #if (waxe && !flash_menu)
+   public function addItems(iflashnu:Menu,inItem:MenuItem) : Void;
    #end
    public function add(inItem:MenuItem) : Void;
    public function closeMenu(inItem:MenuItem):Void;
@@ -148,8 +148,8 @@ class SpriteMenubar extends Sprite implements Menubar implements IDock
    public function setDirty(inLayout:Bool, inChrome:Bool):Void
    {
    }
-   #if (waxe && !nme_menu)
-   public function addItems(inMenu:Menu,inItem:MenuItem) : Void
+   #if (waxe && !flash_menu)
+   public function addItems(iflashnu:Menu,inItem:MenuItem) : Void
    {
       throw "Not wx menubar";
    }
@@ -160,7 +160,7 @@ class SpriteMenubar extends Sprite implements Menubar implements IDock
 
 
 
-#if (waxe && !nme_menu)
+#if (waxe && !flash_menu)
 
 
 
@@ -185,7 +185,7 @@ class WxMenubar implements Menubar
       return 0;
    }
 
-   public function addItems(inMenu:Menu,inItem:MenuItem) : Void
+   public function addItems(iflashnu:Menu,inItem:MenuItem) : Void
    {
       for(child in inItem.mChildren)
       {
@@ -195,7 +195,7 @@ class WxMenubar implements Menubar
                child.gmID = wx.Lib.nextID();
             ApplicationMain.frame.handle(child.gmID, child.onSelect);
          }
-         inMenu.append(child.gmID, child.gmText);
+         iflashnu.append(child.gmID, child.gmText);
       }
    }
    public function closeMenu(inItem:MenuItem):Void { }

@@ -1,12 +1,12 @@
 package gm2d.ui;
 
-import nme.text.TextField;
-import nme.display.Sprite;
-import nme.display.BitmapData;
-import nme.events.MouseEvent;
+import flash.text.TextField;
+import flash.display.Sprite;
+import flash.display.BitmapData;
+import flash.events.MouseEvent;
 import gm2d.ui.Button;
 import gm2d.ui.Layout;
-import nme.geom.Point;
+import flash.geom.Point;
 import gm2d.skin.Skin;
 
 class NumericInput extends TextInput

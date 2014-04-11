@@ -1,18 +1,18 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.BitmapData;
-import nme.display.Shape;
-import nme.display.Sprite;
-import nme.display.Bitmap;
-import nme.geom.Rectangle;
-import nme.text.TextField;
+import flash.display.DisplayObject;
+import flash.display.BitmapData;
+import flash.display.Shape;
+import flash.display.Sprite;
+import flash.display.Bitmap;
+import flash.geom.Rectangle;
+import flash.text.TextField;
 import gm2d.ui.MouseWatcher;
 import gm2d.ui.Layout;
-import nme.display.GradientType;
-import nme.geom.Matrix;
-import nme.geom.Point;
-import nme.events.MouseEvent;
+import flash.display.GradientType;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.events.MouseEvent;
 import gm2d.skin.Skin;
 import gm2d.RGBHSV;
 
@@ -280,7 +280,7 @@ class ColourWheel extends Widget
       layout.mAlign = Layout.AlignKeepAspect | Layout.AlignStretch;
       layout.onLayout = onBmpLayout;
       setItemLayout(layout);
-      getLayout().setAlignment(Layout.AlignStretch);
+      getLayout().setAligflashnt(Layout.AlignStretch);
       mMode = RGBHSV.VALUE;
       build();
    }
@@ -393,7 +393,7 @@ class ColourWheel extends Widget
       var bmp = emptyBmp(w,h);
       bitmap.bitmapData = bmp;
 
-      var pixels = new nme.utils.ByteArray();
+      var pixels = new flash.utils.ByteArray();
       if ( mMode==RGBHSV.VALUE || mMode==RGBHSV.SATURATION )
       {
          for(y in 0...h)
@@ -599,8 +599,8 @@ class ColourControl extends Widget
       box = new RGBBox(mColour,true);
       addChild(box);
       new MouseWatcher(box,null,onRGBDrag,onRGBDrop,0,0,true);
-      all.add(box.getLayout().setAlignment( Layout.AlignStretch).setBorders(2,2,2,2));
-      all.setAlignment( Layout.AlignStretch);
+      all.add(box.getLayout().setAligflashnt( Layout.AlignStretch).setBorders(2,2,2,2));
+      all.setAligflashnt( Layout.AlignStretch);
 
       all.add(null);
 
@@ -623,7 +623,7 @@ class ColourControl extends Widget
       var vstack = new GridLayout(1);
       vstack.add(swatches);
       vstack.add(all);
-      vstack.setAlignment(Layout.AlignStretch | Layout.AlignTop).setSpacing(0,4);
+      vstack.setAligflashnt(Layout.AlignStretch | Layout.AlignTop).setSpacing(0,4);
 
       setInputMode(mMode);
       setAll();

@@ -1,13 +1,13 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.BitmapData;
-import nme.display.Bitmap;
-import nme.geom.Rectangle;
-import nme.geom.Point;
-import nme.text.TextField;
-import nme.events.MouseEvent;
-import nme.text.TextFieldAutoSize;
+import flash.display.DisplayObject;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.geom.Rectangle;
+import flash.geom.Point;
+import flash.text.TextField;
+import flash.events.MouseEvent;
+import flash.text.TextFieldAutoSize;
 import gm2d.skin.Skin;
 import gm2d.skin.Renderer;
 import gm2d.ui.Layout;

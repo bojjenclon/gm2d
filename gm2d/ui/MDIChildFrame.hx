@@ -1,9 +1,9 @@
 package gm2d.ui;
 
-import nme.geom.Rectangle;
-import nme.display.Sprite;
-import nme.geom.Point;
-import nme.events.MouseEvent;
+import flash.geom.Rectangle;
+import flash.display.Sprite;
+import flash.geom.Point;
+import flash.events.MouseEvent;
 import gm2d.ui.HitBoxes;
 import gm2d.ui.Dock;
 import gm2d.ui.DockPosition;
@@ -24,7 +24,7 @@ class MDIChildFrame extends Widget
    var mClientWidth:Int;
    var mClientHeight:Int;
    var mClientOffset:Point;
-   var mDragStage:nme.display.Stage;
+   var mDragStage:flash.display.Stage;
    var mPaneContainer:Sprite;
    var mResizeHandle:Sprite;
 	var mIsCurrent:Bool;

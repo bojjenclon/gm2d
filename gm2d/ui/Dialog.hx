@@ -1,15 +1,15 @@
 package gm2d.ui;
 
-import nme.events.MouseEvent;
-import nme.display.DisplayObject;
-import nme.display.Sprite;
-import nme.text.TextField;
-import nme.text.TextFormat;
+import flash.events.MouseEvent;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.text.TextField;
+import flash.text.TextFormat;
 import gm2d.ui.Layout;
-import nme.filters.BitmapFilter;
-import nme.filters.DropShadowFilter;
+import flash.filters.BitmapFilter;
+import flash.filters.DropShadowFilter;
 import gm2d.ui.HitBoxes;
-import nme.geom.Rectangle;
+import flash.geom.Rectangle;
 import gm2d.skin.Skin;
 import gm2d.skin.Renderer;
 
@@ -31,7 +31,7 @@ class Dialog extends Window
       mContent = new Sprite();
       inPane.setDock(null,this);
 
-      //var dbgObject = new nme.display.Shape();
+      //var dbgObject = new flash.display.Shape();
       //addChild(dbgObject);
       //Layout.setDebug(dbgObject);
 
@@ -43,7 +43,7 @@ class Dialog extends Window
       build();
 
       // TODO - use hit boxes/MouseWatcher
-      mChrome.addEventListener(nme.events.MouseEvent.MOUSE_DOWN, doDrag);
+      mChrome.addEventListener(flash.events.MouseEvent.MOUSE_DOWN, doDrag);
 
       if (gm2d.Lib.isOpenGL)
          cacheAsBitmap = true;
@@ -57,13 +57,13 @@ class Dialog extends Window
    function doneDrag(_)
    {
       stopDrag();
-      stage.removeEventListener(nme.events.MouseEvent.MOUSE_UP, doneDrag);
+      stage.removeEventListener(flash.events.MouseEvent.MOUSE_UP, doneDrag);
    }
 
    function doDrag(_)
    {
       startDrag();
-      stage.addEventListener(nme.events.MouseEvent.MOUSE_UP, doneDrag);
+      stage.addEventListener(flash.events.MouseEvent.MOUSE_UP, doneDrag);
    }
 
    public function goBack() { Game.closeDialog(); }

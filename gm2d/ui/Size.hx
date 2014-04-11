@@ -1,3 +1,3 @@
 package gm2d.ui;
 
-typedef Size=nme.geom.Point;
+typedef Size=flash.geom.Point;

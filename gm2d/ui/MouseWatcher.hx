@@ -1,9 +1,9 @@
 package gm2d.ui;
 
-import nme.events.MouseEvent;
-import nme.display.Stage;
-import nme.display.DisplayObject;
-import nme.geom.Point;
+import flash.events.MouseEvent;
+import flash.display.Stage;
+import flash.display.DisplayObject;
+import flash.geom.Point;
 
 class MouseWatcher
 {

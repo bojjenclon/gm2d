@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.display.DisplayObject;
-import nme.display.Graphics;
-import nme.display.Shape;
-import nme.text.TextField;
-import nme.geom.Point;
+import flash.display.DisplayObject;
+import flash.display.Graphics;
+import flash.display.Shape;
+import flash.text.TextField;
+import flash.geom.Point;
 
 // --- Layout -------------------------------------------
 
@@ -42,7 +42,7 @@ class Layout
 
    public var onLayout:Float->Float->Float->Float->Void;
 
-   static var mDebug:nme.display.Graphics;
+   static var mDebug:flash.display.Graphics;
    static var mDebugObject:Shape;
 
 
@@ -61,7 +61,7 @@ class Layout
      mDebug = inShape.graphics;
    }
 
-   public function setAlignment(inAlign:Int)
+   public function setAligflashnt(inAlign:Int)
    {
       mAlign = inAlign;
       return this;
@@ -1038,7 +1038,7 @@ class FlowLayout extends Layout
       rowAlign = Layout.AlignLeft;
       mChildren = [];
       spaceX = spaceY = 0.0;
-      setAlignment(Layout.AlignStretch);
+      setAligflashnt(Layout.AlignStretch);
    }
 
    public function setRowAlign(inAlign:Int)

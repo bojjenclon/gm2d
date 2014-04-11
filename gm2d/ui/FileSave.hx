@@ -1,5 +1,5 @@
 package gm2d.ui;
-import nme.utils.ByteArray;
+import flash.utils.ByteArray;
 import gm2d.ui.ProgressDialog;
 
 #if flash
@@ -20,7 +20,7 @@ import wx.FileDialog;
 
 class FileSave
 {
-   public static function saveAs(inMessage:String,
+   public static function saveAs(iflashssage:String,
             inData:ByteArray,
             onResult:String->Void,
             onError:String->Void,
@@ -33,7 +33,7 @@ class FileSave
       #elseif flash
       #else
 
-      var openScreen = new gm2d.ui.FileOpenScreen(inMessage, inDefaultPath==null?"":inDefaultPath,
+      var openScreen = new gm2d.ui.FileOpenScreen(iflashssage, inDefaultPath==null?"":inDefaultPath,
          null, inExtension, inFlags | FileOpen.SAVE, saveName );
       openScreen.onSaveResult = onResult;
       openScreen.onError = onError;

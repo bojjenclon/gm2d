@@ -1,9 +1,9 @@
 package gm2d.ui;
 
-import nme.text.TextField;
-import nme.display.BitmapData;
-import nme.events.MouseEvent;
-import nme.ui.Keyboard;
+import flash.text.TextField;
+import flash.display.BitmapData;
+import flash.events.MouseEvent;
+import flash.ui.Keyboard;
 import gm2d.ui.Button;
 import gm2d.skin.Skin;
 import gm2d.ui.Layout;
@@ -21,13 +21,13 @@ class TextInput extends Control
        super(Widget.addLine(inLineage,"TextInput"));
 
        mText = new TextField();
-       mText.autoSize = nme.text.TextFieldAutoSize.LEFT;
+       mText.autoSize = flash.text.TextFieldAutoSize.LEFT;
        mText.background = true;
        mText.backgroundColor = 0xffffff;
        addChild(mText);
 
-       mText.type = nme.text.TextFieldType.INPUT;
-       mText.autoSize = nme.text.TextFieldAutoSize.NONE;
+       mText.type = flash.text.TextFieldType.INPUT;
+       mText.autoSize = flash.text.TextFieldAutoSize.NONE;
        mRenderer.renderLabel(mText);
        mText.text = inVal;
        mText.x = 0.5;
@@ -35,7 +35,7 @@ class TextInput extends Control
        mText.border = true;
        mText.borderColor = 0x000000;
 
-       mTextLayout = new TextLayout(mText).setAlignment(Layout.AlignStretch);
+       mTextLayout = new TextLayout(mText).setAligflashnt(Layout.AlignStretch);
 
        var extra = createExtraWidgetLayout();
        if (extra==null)
@@ -46,7 +46,7 @@ class TextInput extends Control
           grid.setColStretch(0,1);
           grid.add( mTextLayout );
           grid.add( extra );
-          grid.setAlignment(Layout.AlignStretch  | Layout.AlignCenterY );
+          grid.setAligflashnt(Layout.AlignStretch  | Layout.AlignCenterY );
           grid.setSpacing(0,0);
           grid.mDbgObj = this;
           setItemLayout(grid);
@@ -58,7 +58,7 @@ class TextInput extends Control
        if (onUpdate!=null)
        {
           var t= mText;
-          mText.addEventListener(nme.events.Event.CHANGE, function(_) onUpdate(t.text) );
+          mText.addEventListener(flash.events.Event.CHANGE, function(_) onUpdate(t.text) );
        }
  
        build();
@@ -90,7 +90,7 @@ class TextInput extends Control
    }
 
 
-   public override function onKeyDown(event:nme.events.KeyboardEvent ) : Bool
+   public override function onKeyDown(event:flash.events.KeyboardEvent ) : Bool
    {
       #if flash
       var code:UInt = event.keyCode;

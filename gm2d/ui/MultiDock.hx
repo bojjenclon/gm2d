@@ -1,15 +1,15 @@
 package gm2d.ui;
 
-import nme.display.DisplayObjectContainer;
-import nme.display.Sprite;
+import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
 import gm2d.ui.DockPosition;
 import gm2d.ui.HitBoxes;
-import nme.geom.Rectangle;
+import flash.geom.Rectangle;
 import gm2d.skin.Skin;
 import gm2d.skin.TabRenderer;
-import nme.display.SimpleButton;
-import nme.events.MouseEvent;
-import nme.text.TextField;
+import flash.display.SimpleButton;
+import flash.events.MouseEvent;
+import flash.text.TextField;
 
 class MultiDock implements IDock implements IDockable
 {
@@ -48,7 +48,7 @@ class MultiDock implements IDock implements IDockable
    // Display
    public function getTitle():String { return ""; }
    public function getShortTitle():String { return ""; }
-   public function getIcon():nme.display.BitmapData { return null; }
+   public function getIcon():flash.display.BitmapData { return null; }
    public function getFlags():Int { return flags; }
    public function setFlags(inFlags:Int):Void { flags = inFlags; }
    // Layout
@@ -145,7 +145,7 @@ class MultiDock implements IDock implements IDockable
       setDirty(false,true);
    }
 
-   public function getDockRect():nme.geom.Rectangle
+   public function getDockRect():flash.geom.Rectangle
    {
       return mRect.clone();
    }

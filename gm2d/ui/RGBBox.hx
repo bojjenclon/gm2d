@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.text.TextField;
-import nme.events.MouseEvent;
+import flash.text.TextField;
+import flash.events.MouseEvent;
 import gm2d.ui.Layout;
 import gm2d.RGBHSV;
-import nme.text.TextFieldAutoSize;
+import flash.text.TextFieldAutoSize;
 
 
 class RGBBox extends Widget
@@ -25,8 +25,8 @@ class RGBBox extends Widget
       mColour = inColour.clone();
       updateLockout = 0;
 
-      var fmt = new nme.text.TextFormat();
-      fmt.align = nme.text.TextFormatAlign.CENTER;
+      var fmt = new flash.text.TextFormat();
+      fmt.align = flash.text.TextFormatAlign.CENTER;
 
       textField = new TextField( );
       textField.border = true;

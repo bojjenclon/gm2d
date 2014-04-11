@@ -1,6 +1,6 @@
 package gm2d.ui;
 
-import nme.events.MouseEvent;
+import flash.events.MouseEvent;
 
 class Phase
 {

@@ -1,11 +1,11 @@
 package gm2d.ui;
 
-import nme.geom.Rectangle;
-import nme.geom.Point;
-import nme.display.Bitmap;
-import nme.display.Sprite;
-import nme.display.DisplayObject;
-import nme.events.MouseEvent;
+import flash.geom.Rectangle;
+import flash.geom.Point;
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.display.DisplayObject;
+import flash.events.MouseEvent;
 
 class ResizeFlag
 {
@@ -93,7 +93,7 @@ class HitBoxes
 
    function onMouseDown(event:MouseEvent)
    {
-      var obj:nme.display.DisplayObject = event.target;
+      var obj:flash.display.DisplayObject = event.target;
       if (obj==mObject)
          onDown(event.localX, event.localY, event);
       else
@@ -106,7 +106,7 @@ class HitBoxes
 
    function onMouseUp(event:MouseEvent)
    {
-      var obj:nme.display.DisplayObject = event.target;
+      var obj:flash.display.DisplayObject = event.target;
       if (obj==mObject)
          onUp(event.localX, event.localY, event);
       else
@@ -118,7 +118,7 @@ class HitBoxes
 
    function onMouseMove(event:MouseEvent)
    {
-      var obj:nme.display.DisplayObject = event.target;
+      var obj:flash.display.DisplayObject = event.target;
       if (obj==mObject)
          onMove(event.localX, event.localY, event);
       else

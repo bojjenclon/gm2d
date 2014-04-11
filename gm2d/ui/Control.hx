@@ -1,8 +1,8 @@
 package gm2d.ui;
 
 
-import nme.display.DisplayObjectContainer;
-import nme.events.MouseEvent;
+import flash.display.DisplayObjectContainer;
+import flash.events.MouseEvent;
 import gm2d.ui.Layout;
 import gm2d.skin.Skin;
 

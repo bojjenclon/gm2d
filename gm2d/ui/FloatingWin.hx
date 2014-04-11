@@ -4,11 +4,11 @@ import gm2d.Screen;
 import gm2d.ScreenScaleMode;
 import gm2d.skin.Skin;
 import gm2d.ui.Layout;
-import nme.display.Sprite;
-import nme.geom.Point;
-import nme.geom.Rectangle;
+import flash.display.Sprite;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import gm2d.ui.HitBoxes;
-import nme.events.MouseEvent;
+import flash.events.MouseEvent;
 
 class FloatingWin extends Sprite implements IDock
 {

@@ -5,10 +5,10 @@ import gm2d.ScreenScaleMode;
 import gm2d.skin.Skin;
 import gm2d.ui.Layout;
 import gm2d.ui.HitBoxes;
-import nme.display.Sprite;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.events.MouseEvent;
+import flash.display.Sprite;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.events.MouseEvent;
 
 class MiniWin extends Sprite
 {
@@ -19,7 +19,7 @@ class MiniWin extends Sprite
    var mClientWidth:Float;
    var mClientHeight:Float;
    var mClientOffset:Point;
-   var mDragStage:nme.display.Stage;
+   var mDragStage:flash.display.Stage;
 
    public function new(inPane:Pane, inScreen:Screen )
    {

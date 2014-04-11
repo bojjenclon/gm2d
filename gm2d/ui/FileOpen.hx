@@ -1,5 +1,5 @@
 package gm2d.ui;
-import nme.utils.ByteArray;
+import flash.utils.ByteArray;
 import gm2d.ui.ProgressDialog;
 
 #if flash
@@ -114,14 +114,14 @@ class FileOpen
    public static inline var SAVE   = 0x0002;
    public static inline var CHECK_OVERWRITE   = 0x0004;
 
-   public static function load(inMessage:String,
+   public static function load(iflashssage:String,
             onResult:String->ByteArray->Void,
             ?inFilter:String,
             ?inDefaultPath:String,
             inFlags:Int = 0)
    {
       #if waxe
-        var dialog = new wx.FileDialog(null,inMessage);
+        var dialog = new wx.FileDialog(null,iflashssage);
         if (inFilter!=null)
         {
            dialog.filter = inFilter;
@@ -157,7 +157,7 @@ class FileOpen
 
       #else
 
-      new gm2d.ui.FileOpenScreen(inMessage, inDefaultPath==null?"":inDefaultPath, onResult, inFilter, inFlags);
+      new gm2d.ui.FileOpenScreen(iflashssage, inDefaultPath==null?"":inDefaultPath, onResult, inFilter, inFlags);
 
       #end
    }

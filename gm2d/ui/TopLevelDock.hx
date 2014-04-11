@@ -1,13 +1,13 @@
 package gm2d.ui;
 
-import nme.display.DisplayObjectContainer;
-import nme.display.Sprite;
-import nme.display.Stage;
+import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
+import flash.display.Stage;
 import gm2d.ui.DockPosition;
 import gm2d.ui.HitBoxes;
 import gm2d.ui.MouseWatcher;
-import nme.events.MouseEvent;
-import nme.geom.Rectangle;
+import flash.events.MouseEvent;
+import flash.geom.Rectangle;
 import gm2d.ui.DockZones;
 import gm2d.skin.Skin;
 
@@ -54,7 +54,7 @@ class TopLevelDock implements IDock
          root = mdi;
          mdi.setDock(this,paneContainer);
       }
-      container.addEventListener(nme.events.Event.RENDER, updateLayout);
+      container.addEventListener(flash.events.Event.RENDER, updateLayout);
    }
 
    public function floatWindow(inDockable:IDockable, inEvent:MouseEvent, inProps:Dynamic)

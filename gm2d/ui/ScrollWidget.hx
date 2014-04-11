@@ -1,10 +1,10 @@
 package gm2d.ui;
 
-import nme.events.MouseEvent;
-import nme.events.Event;
-import nme.display.Stage;
-import nme.geom.Point;
-import nme.geom.Rectangle;
+import flash.events.MouseEvent;
+import flash.events.Event;
+import flash.display.Stage;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import gm2d.tween.Tween;
 import gm2d.math.TimeAverage;
 import haxe.Timer;

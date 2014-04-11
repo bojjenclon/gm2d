@@ -1,7 +1,7 @@
 package gm2d.ui;
 
-import nme.events.MouseEvent;
-import nme.ui.Keyboard;
+import flash.events.MouseEvent;
+import flash.ui.Keyboard;
 
 class Window extends Widget
 {
@@ -46,7 +46,7 @@ class Window extends Widget
    {
       if (!inEvent.buttonDown)
       {
-         var target:nme.display.DisplayObject = inEvent.target;
+         var target:flash.display.DisplayObject = inEvent.target;
          while(target!=null && target!=this)
          {
             if (Std.is(target,Widget))
@@ -75,7 +75,7 @@ class Window extends Widget
    }
 
 
-   public override function onKeyDown(event:nme.events.KeyboardEvent ) : Bool
+   public override function onKeyDown(event:flash.events.KeyboardEvent ) : Bool
    {
       if (mCurrent!=null)
       {
@@ -120,7 +120,7 @@ class Window extends Widget
    public function getWindowWidth() { return width; }
    public function getWindowHeight() { return height; }
 
-   public function onKeyUp(event:nme.events.KeyboardEvent):Bool { return false; }
+   public function onKeyUp(event:flash.events.KeyboardEvent):Bool { return false; }
    public dynamic function onAdded() { }
 
    public function onMouseMove(inX:Float, inY:Float) { }
