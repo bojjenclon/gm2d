@@ -1,7 +1,7 @@
 package gm2d;
 
 import flash.display.GradientType;
-import gm2d.Interpolatioflashthod;
+import gm2d.InterpolationMethod;
 import flash.display.SpreadMethod;
 import flash.geom.Matrix;
 import flash.display.Graphics;
