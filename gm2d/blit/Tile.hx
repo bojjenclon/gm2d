@@ -1,4 +1,6 @@
 package gm2d.blit;
+import flash.display.BitmapData;
+import flash.geom.Point;
 import flash.geom.Rectangle;
 
 class Tile
@@ -16,7 +18,14 @@ class Tile
       id = sheet.gm2dAllocTile(this);
       hotX = hotY = 0;
    }
-
+   
+    public function asBitmapData() : BitmapData
+    {
+        var bmp:BitmapData = new BitmapData(Std.int(rect.width), Std.int(rect.height));
+        bmp.copyPixels(sheet.gm2dData, rect, new Point(0, 0));
+        return bmp;
+    }
+   
    public function alignLeft() { hotX = 0; return this; }
    public function alignCenterX() { hotX = rect.width/2; return this; }
    public function alignRight() { hotX = rect.width; return this; }
