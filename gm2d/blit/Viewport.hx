@@ -41,7 +41,7 @@ class Viewport extends Sprite
       if (inForceSoftware || (!gm2d.Lib.isOpenGL && !inForceflash) )
          return new BMPViewport(inWidth,inHeight,inBGMode==BG_TRANSPARENT,inBackground);
       else
-         return new flashViewport(inWidth,inHeight,inBGMode!=BG_OPAQUE,inBackground);
+         return new NMEViewport(inWidth,inHeight,inBGMode!=BG_OPAQUE,inBackground);
       #end
    }
 

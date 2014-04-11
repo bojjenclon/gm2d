@@ -67,7 +67,7 @@ class Game
       if (created)
          return;
       created = true;
-
+      
       #if !flash
       initWidth = flash.Lib.initWidth;
       initHeight = flash.Lib.initHeight;

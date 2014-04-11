@@ -7,7 +7,7 @@ import flash.display.Stage;
 import flash.events.Event;
 import flash.geom.Rectangle;
 
-class flashViewport extends Viewport
+class NMEViewport extends Viewport
 {
    public function new(inWidth:Int, inHeight:Int,inTransparent:Bool,inBackground)
    {
@@ -25,7 +25,7 @@ class flashViewport extends Viewport
 
    public override function createLayer() : Layer
    {
-      var layer = flashLayer.gm2dCreate(this);
+      var layer = NMELayer.gm2dCreate(this);
       addLayer(layer);
       addChild(layer.gm2dShape);
       return layer;

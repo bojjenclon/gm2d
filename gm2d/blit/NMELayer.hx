@@ -3,13 +3,13 @@ package gm2d.blit;
 #if !flash
 import flash.display.Graphics;
 
-class flashLayer extends Layer
+class NMELayer extends Layer
 {
    var mXYID:Array<Float>;
    var mCurrentSheet:Tilesheet;
    public var gm2dShape:flash.display.Shape;
    
-   function new(inVP:flashViewport)
+   function new(inVP:NMEViewport)
    {
       gm2dShape = new flash.display.Shape();
       mXYID = [];
@@ -27,9 +27,9 @@ class flashLayer extends Layer
       }
    }
 
-   public static function gm2dCreate(inVP:flashViewport)
+   public static function gm2dCreate(inVP:NMEViewport)
    {
-      return new flashLayer(inVP);
+      return new NMELayer(inVP);
    }
 
    public override function gm2dRender(inOX:Float, inOY:Float)
