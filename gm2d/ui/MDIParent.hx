@@ -66,7 +66,7 @@ class MDIParent extends Sprite implements IDock implements IDockable
 
       mLayout = new GridLayout(1,"MDI");
       mLayout.setAligflashnt(Layout.AlignStretch);
-      clientLayout = new DisplayLayout(clientArea, clientWidth, clientHeight);
+      clientLayout = new DisplayLayout(clientArea, 0x24, clientWidth, clientHeight);
       clientLayout.setAligflashnt(Layout.AlignStretch);
       clientLayout.onLayout = setClientSize;
       mLayout.add(mTabContainer.getLayout());
