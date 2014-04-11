@@ -1,8 +1,8 @@
 package gm2d.blit;
 
-import nme.display.BitmapData;
-import nme.geom.Rectangle;
-import nme.geom.Point;
+import flash.display.BitmapData;
+import flash.geom.Rectangle;
+import flash.geom.Point;
 
 class Tilesheet
 {
@@ -27,7 +27,7 @@ class Tilesheet
    static public inline var INTERP_SMOOTH       = 0x04;
 
    #if !flash
-   public var gm2dSheet:nme.display.Tilesheet;
+   public var gm2dSheet:flash.display.Tilesheet;
    #end
 
    public function new(inData:BitmapData,inFlags:Int = BORDERS_NONE)
@@ -38,7 +38,7 @@ class Tilesheet
       mSpace = inFlags & 0x03;
       mSmooth = (inFlags & INTERP_SMOOTH) != 0;
       #if !flash
-      gm2dSheet = new nme.display.Tilesheet(gm2dData);
+      gm2dSheet = new flash.display.Tilesheet(gm2dData);
       #end
            useAlpha = inData.transparent;
    }

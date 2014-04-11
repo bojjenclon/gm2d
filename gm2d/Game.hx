@@ -1,20 +1,20 @@
 package gm2d;
 
-import nme.display.Sprite;
-import nme.display.Shape;
+import flash.display.Sprite;
+import flash.display.Shape;
 import gm2d.Screen;
-import nme.display.StageScaleMode;
-import nme.display.StageDisplayState;
-import nme.events.Event;
-import nme.events.KeyboardEvent;
-import nme.events.MouseEvent;
-import nme.text.TextField;
+import flash.display.StageScaleMode;
+import flash.display.StageDisplayState;
+import flash.events.Event;
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.text.TextField;
 import gm2d.ui.Dialog;
-import nme.geom.Point;
+import flash.geom.Point;
 import gm2d.ui.Window;
-import nme.filters.BitmapFilter;
-import nme.filters.DropShadowFilter;
-import nme.display.DisplayObject;
+import flash.filters.BitmapFilter;
+import flash.filters.DropShadowFilter;
+import flash.display.DisplayObject;
 
 typedef Hash<T> = haxe.ds.StringMap<T>;
 
@@ -69,8 +69,8 @@ class Game
       created = true;
 
       #if !flash
-      initWidth = nme.Lib.initWidth;
-      initHeight = nme.Lib.initHeight;
+      initWidth = flash.Lib.initWidth;
+      initHeight = flash.Lib.initHeight;
       #else
       initWidth = flash.Lib.current.stage.stageWidth;
       initHeight = flash.Lib.current.stage.stageHeight;
@@ -92,7 +92,7 @@ class Game
       mFPSControl.visible = mShowFPS;
       mFPSControl.textColor = mFPSColor;
 
-      var parent = nme.Lib.current;
+      var parent = flash.Lib.current;
       parent.addChildAt(mScreenParent,0);
       parent.addChildAt(mDialogParent,1);
       parent.addChildAt(mPopupParent,2);
@@ -100,7 +100,7 @@ class Game
       parent.addChildAt(mDebugOverlay,4);
 
       //if (pixelAccurate)
-      parent.stage.scaleMode = nme.display.StageScaleMode.NO_SCALE;
+      parent.stage.scaleMode = flash.display.StageScaleMode.NO_SCALE;
 
       parent.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown );
       parent.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp );
@@ -119,7 +119,7 @@ class Game
 
    static function setStageTransform()
    {
-      var parent = nme.Lib.current;
+      var parent = flash.Lib.current;
       var sw = parent.stage.stageWidth;
       var sh = parent.stage.stageHeight;
 
@@ -277,9 +277,9 @@ class Game
          if (mCurrentDialog==null)
          {
             if (mCurrentScreen.wantsCursor())
-               nme.ui.Mouse.show();
+               flash.ui.Mouse.show();
             else
-               nme.ui.Mouse.hide();
+               flash.ui.Mouse.hide();
          }
 
          mCurrentScreen.setRunning(mCurrentDialog==null);
@@ -448,8 +448,8 @@ class Game
 
    static public function toggleFullscreen()
    {
-      #if nme
-      var stage = nme.Lib.current.stage;
+      #if flash
+      var stage = flash.Lib.current.stage;
       stage.displayState = Type.enumEq(stage.displayState,StageDisplayState.NORMAL) ?
       StageDisplayState.FULL_SCREEN : StageDisplayState.NORMAL;
       #end
@@ -629,14 +629,14 @@ class Game
    public static function close()
    {
       #if !flash
-      nme.Lib.close();
+      flash.Lib.close();
       #end
    }
 
 
    public static function isDown(inCode:Int) : Bool { return mKeyDown[inCode]; }
 
-   static function onUpdate(e:nme.events.Event)
+   static function onUpdate(e:flash.events.Event)
    {
       var now = haxe.Timer.stamp();
       if (mCurrentScreen!=null)

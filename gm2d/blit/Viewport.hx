@@ -1,9 +1,9 @@
 package gm2d.blit;
 
-import nme.display.Sprite;
-import nme.display.Stage;
-import nme.events.Event;
-import nme.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.events.Event;
+import flash.geom.Rectangle;
 
 
 import gm2d.blit.Grid;
@@ -32,16 +32,16 @@ class Viewport extends Sprite
    var mRect:Rectangle;
 
    public static function create(inWidth:Int, inHeight:Int,
-        inBGMode:Int=1,inBackground:Int=0xffffff,inForceSoftware:Bool = false,inForceNME:Bool=false)
+        inBGMode:Int=1,inBackground:Int=0xffffff,inForceSoftware:Bool = false,inForceflash:Bool=false)
             : Viewport
    {
       #if flash
       return new BMPViewport(inWidth,inHeight,inBGMode==BG_TRANSPARENT,inBackground);
       #else
-      if (inForceSoftware || (!gm2d.Lib.isOpenGL && !inForceNME) )
+      if (inForceSoftware || (!gm2d.Lib.isOpenGL && !inForceflash) )
          return new BMPViewport(inWidth,inHeight,inBGMode==BG_TRANSPARENT,inBackground);
       else
-         return new NMEViewport(inWidth,inHeight,inBGMode!=BG_OPAQUE,inBackground);
+         return new flashViewport(inWidth,inHeight,inBGMode!=BG_OPAQUE,inBackground);
       #end
    }
 

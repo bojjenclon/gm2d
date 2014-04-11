@@ -1,6 +1,6 @@
 package gm2d;
 
-import nme.display.DisplayObjectContainer;
+import flash.display.DisplayObjectContainer;
 
 class Lib
 {
@@ -14,7 +14,7 @@ class Lib
       #if flash
       return flash.Lib.current;
       #else
-      return nme.Lib.current;
+      return flash.Lib.current;
       #end
    }
 
@@ -23,7 +23,7 @@ class Lib
       #if flash
       return false;
       #else
-      return nme.Lib.stage.isOpenGL;
+      return flash.Lib.stage.isOpenGL;
       #end
    }
 }

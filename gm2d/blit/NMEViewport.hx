@@ -2,12 +2,12 @@ package gm2d.blit;
 
 #if !flash
 
-import nme.display.Sprite;
-import nme.display.Stage;
-import nme.events.Event;
-import nme.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.events.Event;
+import flash.geom.Rectangle;
 
-class NMEViewport extends Viewport
+class flashViewport extends Viewport
 {
    public function new(inWidth:Int, inHeight:Int,inTransparent:Bool,inBackground)
    {
@@ -25,7 +25,7 @@ class NMEViewport extends Viewport
 
    public override function createLayer() : Layer
    {
-      var layer = NMELayer.gm2dCreate(this);
+      var layer = flashLayer.gm2dCreate(this);
       addLayer(layer);
       addChild(layer.gm2dShape);
       return layer;

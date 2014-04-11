@@ -1,7 +1,7 @@
 package gm2d.blit;
 
-import nme.display.BitmapData;
-import nme.geom.Point;
+import flash.display.BitmapData;
+import flash.geom.Point;
 
 class LayerTile
 {
@@ -61,7 +61,7 @@ class BMPLayer extends Layer
    public override function gm2dRender(inOX:Float, inOY:Float)
    {
       var tile = mHead;
-      var pos = new nme.geom.Point();
+      var pos = new flash.geom.Point();
       var ox = offsetX - inOX;
       var oy = offsetY - inOY;
       while(tile!=null)

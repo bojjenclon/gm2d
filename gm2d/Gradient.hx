@@ -1,10 +1,10 @@
 package gm2d;
 
-import nme.display.GradientType;
-import gm2d.InterpolationMethod;
-import nme.display.SpreadMethod;
-import nme.geom.Matrix;
-import nme.display.Graphics;
+import flash.display.GradientType;
+import gm2d.Interpolatioflashthod;
+import flash.display.SpreadMethod;
+import flash.geom.Matrix;
+import flash.display.Graphics;
 
 
 class GradStop
@@ -34,20 +34,20 @@ class Gradient
 {
    public var stops:Array<GradStop>;
    public var type:GradientType;
-   public var interpolationMethod:InterpolationMethod;
+   public var interpolatioflashthod:Interpolatioflashthod;
    public var spreadMethod:SpreadMethod;
    public var focal:Float;
 
    public static var spreads = [ SpreadMethod.PAD, SpreadMethod.REFLECT, SpreadMethod.REPEAT];
    public static var types = [ GradientType.LINEAR, GradientType.RADIAL ];
-   public static var interps = [ InterpolationMethod.LINEAR_RGB, InterpolationMethod.RGB, InterpolationMethod.STEP ];
+   public static var interps = [ Interpolatioflashthod.LINEAR_RGB, Interpolatioflashthod.RGB, Interpolatioflashthod.STEP ];
 
 
    public function new()
    {
       stops = [];
       type = GradientType.LINEAR;
-      interpolationMethod = InterpolationMethod.RGB;
+      interpolatioflashthod = Interpolatioflashthod.RGB;
       spreadMethod = SpreadMethod.PAD;
       focal = 0.0;
    }
@@ -55,18 +55,18 @@ class Gradient
    {
       var result = new Gradient();
       result.type = type;
-      result.interpolationMethod = interpolationMethod;
+      result.interpolatioflashthod = interpolatioflashthod;
       result.spreadMethod = spreadMethod;
       result.focal = focal;
       for(stop in stops)
          result.stops.push(stop.clone());
       return result;
    }
-   public function getInterpIndex() { return Lambda.indexOf(interps,interpolationMethod); }
+   public function getInterpIndex() { return Lambda.indexOf(interps,interpolatioflashthod); }
    public function getTypeIndex() { return Lambda.indexOf(types,type); }
    public function getSpreadIndex() { return Lambda.indexOf(spreads,spreadMethod); }
 
-   public function setInterpIndex(index:Int) { interpolationMethod = interps[index]; }
+   public function setInterpIndex(index:Int) { interpolatioflashthod = interps[index]; }
    public function setTypeIndex(index:Int) { type = types[index];}
    public function setSpreadIndex(index:Int) { spreadMethod = spreads[index];}
 
@@ -75,7 +75,7 @@ class Gradient
    {
       var result = new Gradient();
       result.type = type;
-      result.interpolationMethod = interpolationMethod;
+      result.interpolatioflashthod = interpolatioflashthod;
       result.spreadMethod = spreadMethod;
       result.focal = focal + (other.focal-focal)*f;
       if (stops.length == other.stops.length)
@@ -133,7 +133,7 @@ class Gradient
    public function getAlphas()
    {
      var result = new Array<Float>();
-     if (interpolationMethod==InterpolationMethod.STEP && stops.length>1)
+     if (interpolatioflashthod==Interpolatioflashthod.STEP && stops.length>1)
      {
         for(i in 1...stops.length)
         {
@@ -150,7 +150,7 @@ class Gradient
    public function getColors()
    {
      var result = new Array<CInt>();
-     if (interpolationMethod==InterpolationMethod.STEP && stops.length>1)
+     if (interpolatioflashthod==Interpolatioflashthod.STEP && stops.length>1)
      {
         for(i in 1...stops.length)
         {
@@ -166,7 +166,7 @@ class Gradient
    public function getRatios()
    {
      var result = new Array<CInt>();
-     if (interpolationMethod==InterpolationMethod.STEP && stops.length>1)
+     if (interpolatioflashthod==Interpolatioflashthod.STEP && stops.length>1)
      {
         for(i in 1...stops.length)
         {
@@ -183,12 +183,12 @@ class Gradient
    public function beginFill(inGfx:Graphics, ?inMatrix:Matrix, ?inType:GradientType)
    {
       var t = inType==null ? type : inType;
-      if (interpolationMethod==InterpolationMethod.LINEAR_RGB)
+      if (interpolatioflashthod==Interpolatioflashthod.LINEAR_RGB)
          inGfx.beginGradientFill(t, getColors(), getAlphas(), getRatios(), inMatrix,
-            spreadMethod, nme.display.InterpolationMethod.LINEAR_RGB, focal );
+            spreadMethod, flash.display.Interpolatioflashthod.LINEAR_RGB, focal );
       else
          inGfx.beginGradientFill(t, getColors(), getAlphas(), getRatios(), inMatrix,
-            spreadMethod, nme.display.InterpolationMethod.RGB, focal );
+            spreadMethod, flash.display.Interpolatioflashthod.RGB, focal );
    }
 
 

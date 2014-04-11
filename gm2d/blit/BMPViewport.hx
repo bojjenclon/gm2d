@@ -1,15 +1,15 @@
 package gm2d.blit;
 
-import nme.display.Sprite;
-import nme.display.Stage;
-import nme.display.BitmapData;
-import nme.events.Event;
-import nme.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.display.BitmapData;
+import flash.events.Event;
+import flash.geom.Rectangle;
 
 class BMPViewport extends Viewport
 {
    public var gm2dBitmapData:BitmapData;
-   var mBitmap:nme.display.Bitmap;
+   var mBitmap:flash.display.Bitmap;
 
 
    public function new(inWidth:Int, inHeight:Int,inTransparent:Bool,inBackground)
@@ -17,7 +17,7 @@ class BMPViewport extends Viewport
       super(inWidth,inHeight,inTransparent,inBackground);
 
       gm2dBitmapData = new BitmapData(inWidth,inHeight,inTransparent, getBG() );
-      mBitmap = new nme.display.Bitmap(gm2dBitmapData);
+      mBitmap = new flash.display.Bitmap(gm2dBitmapData);
       addChild(mBitmap);
    }
 

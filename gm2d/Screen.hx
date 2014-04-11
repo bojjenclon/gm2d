@@ -2,9 +2,9 @@ package gm2d;
 
 import gm2d.Game;
 import gm2d.ui.Dialog;
-import nme.events.MouseEvent;
-import nme.events.KeyboardEvent;
-import nme.ui.Keyboard;
+import flash.events.MouseEvent;
+import flash.events.KeyboardEvent;
+import flash.ui.Keyboard;
 import gm2d.tween.Timeline;
 
 class Screen extends gm2d.ui.Window

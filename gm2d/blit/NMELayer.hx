@@ -1,17 +1,17 @@
 package gm2d.blit;
 
 #if !flash
-import nme.display.Graphics;
+import flash.display.Graphics;
 
-class NMELayer extends Layer
+class flashLayer extends Layer
 {
    var mXYID:Array<Float>;
    var mCurrentSheet:Tilesheet;
-   public var gm2dShape:nme.display.Shape;
+   public var gm2dShape:flash.display.Shape;
    
-   function new(inVP:NMEViewport)
+   function new(inVP:flashViewport)
    {
-      gm2dShape = new nme.display.Shape();
+      gm2dShape = new flash.display.Shape();
       mXYID = [];
       mCurrentSheet = null;
       super(inVP);
@@ -27,9 +27,9 @@ class NMELayer extends Layer
       }
    }
 
-   public static function gm2dCreate(inVP:NMEViewport)
+   public static function gm2dCreate(inVP:flashViewport)
    {
-      return new NMELayer(inVP);
+      return new flashLayer(inVP);
    }
 
    public override function gm2dRender(inOX:Float, inOY:Float)
