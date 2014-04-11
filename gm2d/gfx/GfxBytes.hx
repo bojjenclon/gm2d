@@ -1,14 +1,14 @@
 package gm2d.gfx;
 
-import nme.display.GradientType;
-import nme.display.SpreadMethod;
-import nme.display.InterpolationMethod;
-import nme.display.CapsStyle;
-import nme.display.JointStyle;
-import nme.display.LineScaleMode;
-import nme.geom.Matrix;
+import flash.display.GradientType;
+import flash.display.SpreadMethod;
+import flash.display.Interpolatioflashthod;
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.geom.Matrix;
 
-import nme.utils.ByteArray;
+import flash.utils.ByteArray;
 
 import haxe.io.Bytes;
 import haxe.crypto.BaseCode;
@@ -40,7 +40,7 @@ class GfxBytes extends Gfx
    {
        super();
        buffer = inBuffer==null ? new ByteArray() : inBuffer;
-       buffer.endian = nme.utils.Endian.BIG_ENDIAN;
+       buffer.endian = flash.utils.Endian.BIG_ENDIAN;
    }
 
    public function toString() : String
@@ -81,7 +81,7 @@ class GfxBytes extends Gfx
    static var capsStyles = [ CapsStyle.ROUND, CapsStyle.NONE, CapsStyle.SQUARE ];
    static var jointStyles = [ JointStyle.ROUND, JointStyle.MITER, JointStyle.BEVEL ];
    static var spreadMethods = [ SpreadMethod.PAD, SpreadMethod.REPEAT, SpreadMethod.REFLECT ];
-   static var interpolationMethods = [ InterpolationMethod.RGB, InterpolationMethod.LINEAR_RGB ];
+   static var interpolatioflashthods = [ Interpolatioflashthod.RGB, Interpolatioflashthod.LINEAR_RGB ];
    static var gradientTypes = [ GradientType.LINEAR, GradientType.RADIAL ];
 
    public function iterate(inGfx:Gfx)
@@ -121,7 +121,7 @@ class GfxBytes extends Gfx
               grad.matrix.tx = buffer.readFloat();
               grad.matrix.ty = buffer.readFloat();
               grad.spread = spreadMethods[buffer.readUnsignedByte()];
-              grad.interp = interpolationMethods[buffer.readUnsignedByte()];
+              grad.interp = interpolatioflashthods[buffer.readUnsignedByte()];
               grad.focus = buffer.readFloat();
               inGfx.beginGradientFill(grad);
 

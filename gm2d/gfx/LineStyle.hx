@@ -1,8 +1,8 @@
 package gm2d.gfx;
 
-import nme.display.LineScaleMode;
-import nme.display.CapsStyle;
-import nme.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
 
 class LineStyle
 {

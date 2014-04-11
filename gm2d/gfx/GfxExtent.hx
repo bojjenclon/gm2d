@@ -1,7 +1,7 @@
 package gm2d.gfx;
 
-import nme.geom.Matrix;
-import nme.geom.Rectangle;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
 
 class GfxExtent extends Gfx
 {

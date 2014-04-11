@@ -1,14 +1,14 @@
 package gm2d.gfx;
 
-import nme.display.GradientType;
-import nme.display.SpreadMethod;
-import nme.display.InterpolationMethod;
-import nme.display.CapsStyle;
-import nme.display.JointStyle;
-import nme.display.LineScaleMode;
-import nme.display.Graphics;
+import flash.display.GradientType;
+import flash.display.SpreadMethod;
+import flash.display.Interpolatioflashthod;
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Graphics;
 
-import nme.geom.Matrix;
+import flash.geom.Matrix;
 
 class GfxGraphics extends Gfx
 {
