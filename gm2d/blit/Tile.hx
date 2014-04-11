@@ -1,5 +1,5 @@
 package gm2d.blit;
-import nme.geom.Rectangle;
+import flash.geom.Rectangle;
 
 class Tile
 {
