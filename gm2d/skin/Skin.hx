@@ -12,22 +12,22 @@ import gm2d.ui.SideDock;
 import gm2d.ui.DockZones;
 import gm2d.ui.DockPosition;
 import gm2d.ui.WidgetState;
-import nme.filters.BitmapFilter;
-import nme.filters.BitmapFilterType;
-import nme.filters.DropShadowFilter;
-import nme.filters.GlowFilter;
-import nme.display.Sprite;
-import nme.display.BitmapData;
-import nme.display.Bitmap;
-import nme.display.Shape;
-import nme.display.Graphics;
-import nme.text.TextField;
-import nme.text.TextFieldAutoSize;
-import nme.text.TextFormat;
-import nme.events.MouseEvent;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.geom.Matrix;
+import flash.filters.BitmapFilter;
+import flash.filters.BitmapFilterType;
+import flash.filters.DropShadowFilter;
+import flash.filters.GlowFilter;
+import flash.display.Sprite;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.display.Shape;
+import flash.display.Graphics;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
+import flash.events.MouseEvent;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.geom.Matrix;
 import gm2d.ui.Layout;
 import gm2d.ui.Slider;
 import gm2d.ui.Widget;
@@ -36,7 +36,7 @@ import gm2d.skin.FillStyle;
 import gm2d.skin.LineStyle;
 import gm2d.skin.Style;
 
-import nme.display.SimpleButton;
+import flash.display.SimpleButton;
 import gm2d.svg.Svg;
 import gm2d.svg.SvgRenderer;
 import gm2d.CInt;
@@ -66,7 +66,7 @@ class Skin
    public static var menuHeight:Float = 22;
 
 
-   public static var textFormat:nme.text.TextFormat;
+   public static var textFormat:flash.text.TextFormat;
    public static var mBitmaps:Array< Array<BitmapData> >;
 
 
@@ -258,7 +258,7 @@ class Skin
       var h = up!=null ? up.height : down==null? down.height : 32;
       var layout = widget.getLayout();
       layout.setMinSize(w,h);
-      widget.getItemLayout().setAlignment(Layout.AlignCenter);
+      widget.getItemLayout().setAligflashnt(Layout.AlignCenter);
    }
 
 
@@ -346,12 +346,12 @@ class Skin
    {
       var gfx = inObject.graphics;
       gfx.clear();
-      var mtx = new nme.geom.Matrix();
+      var mtx = new flash.geom.Matrix();
       mtx.createGradientBox(inH,inH,Math.PI * 0.5);
       var cols:Array<CInt> = [guiLight, guiMedium, guiDark];
       var alphas:Array<Float> = [1.0, 1.0, 1.0];
       var ratio:Array<Int> = [0, 128, 255];
-      gfx.beginGradientFill(nme.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
+      gfx.beginGradientFill(flash.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
       gfx.drawRect(0,0,inW,inH);
    }
 
@@ -366,7 +366,7 @@ class Skin
    {
       label.defaultTextFormat = textFormat;
       label.textColor = labelColor;
-      if (label.type != nme.text.TextFieldType.INPUT)
+      if (label.type != flash.text.TextFieldType.INPUT)
       {
          label.autoSize = TextFieldAutoSize.LEFT;
          label.selectable = false;
@@ -383,7 +383,7 @@ class Skin
    }
 */
 
-   public static function styleText(inText:nme.text.TextField)
+   public static function styleText(inText:flash.text.TextField)
    {
       inText.defaultTextFormat = textFormat;
    }
@@ -462,12 +462,12 @@ class Skin
          gfx.drawRect(inRect.x,inRect.y,inRect.width,inRect.height);
 
          /*
-         var mtx = new nme.geom.Matrix();
+         var mtx = new flash.geom.Matrix();
          mtx.createGradientBox(21,21, Math.PI*-0.5, inRect.x+1.5, inRect.y+1.5);
          var cols:Array<Int> = [guiLight, guiMedium, guiDark];
          var alphas:Array<Float> = [1.0, 1.0, 1.0];
          var ratio:Array<Int> = [0, 128, 255];
-         gfx.beginGradientFill(nme.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
+         gfx.beginGradientFill(flash.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
          */
          gfx.beginFill(guiDark);
          //gfx.drawRoundRect(inRect.x+1, inRect.y+2, inRect.width-2, 20, 8,8);
@@ -689,7 +689,7 @@ class Skin
          titleField.textColor = 0x000000;
          titleField.selectable = false;
          titleField.text = title;
-         titleField.autoSize = nme.text.TextFieldAutoSize.LEFT;
+         titleField.autoSize = flash.text.TextFieldAutoSize.LEFT;
          titleField.y = 2;
 
          //var f:Array<BitmapFilter> = [];
@@ -721,7 +721,7 @@ class Skin
    static function createButtonBitmap(inButton:Int, inState:Int) : BitmapData
    {
       var bmp = new BitmapData(16,16,true, gm2d.RGB.CLEAR );
-      var shape = new nme.display.Shape();
+      var shape = new flash.display.Shape();
       var gfx = shape.graphics;
 
       if (false)
@@ -878,12 +878,12 @@ class Skin
 
       if (inIsCurrent)
       {
-         var mtx = new nme.geom.Matrix();
+         var mtx = new flash.geom.Matrix();
          mtx.createGradientBox(title_h+borders,title_h+borders,Math.PI * 0.5);
          var cols:Array<CInt> = [guiLight, guiMedium, guiDark];
          var alphas:Array<Float> = [1.0, 1.0, 1.0];
          var ratio:Array<Int> = [0, 128, 255];
-         gfx.beginGradientFill(nme.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
+         gfx.beginGradientFill(flash.display.GradientType.LINEAR, cols, alphas, ratio, mtx );
       }
       else
       {

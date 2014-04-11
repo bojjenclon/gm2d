@@ -1,6 +1,6 @@
 package gm2d.skin;
 
-import nme.display.BitmapData;
+import flash.display.BitmapData;
 
 enum FillStyle
 {

@@ -1,6 +1,6 @@
 package gm2d.skin;
 
-import nme.text.TextFormat;
+import flash.text.TextFormat;
 import gm2d.svg.Svg;
 import gm2d.svg.SvgRenderer;
 

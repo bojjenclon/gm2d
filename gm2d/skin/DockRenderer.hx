@@ -5,9 +5,9 @@ import gm2d.ui.WidgetState;
 import gm2d.ui.IDockable;
 import gm2d.ui.Pane;
 import gm2d.ui.HitBoxes;
-import nme.geom.Rectangle;
-import nme.display.Sprite;
-import nme.display.Graphics;
+import flash.geom.Rectangle;
+import flash.display.Sprite;
+import flash.display.Graphics;
 
 
 class DockRenderer

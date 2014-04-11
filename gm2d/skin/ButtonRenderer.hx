@@ -1,16 +1,16 @@
 package gm2d.skin;
 
-import nme.display.Bitmap;
-import nme.display.Sprite;
-import nme.display.Graphics;
-import nme.text.TextField;
-import nme.text.TextFieldAutoSize;
-import nme.events.MouseEvent;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.geom.Matrix;
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.display.Graphics;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.events.MouseEvent;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.geom.Matrix;
 
-import nme.display.SimpleButton;
+import flash.display.SimpleButton;
 import gm2d.svg.Svg;
 import gm2d.svg.SvgRenderer;
 import gm2d.ui.Layout;
