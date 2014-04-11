@@ -19,7 +19,7 @@ class Gradient
       ratios = [];
       matrix = new Matrix();
       spread = SpreadMethod.PAD;
-      interp = Interpolatioflashthod.RGB;
+      interp = InterpolationMethod.RGB;
       focus = 0.0;
    }
 
@@ -29,7 +29,7 @@ class Gradient
    public var ratios:Array<Int>;
    public var matrix: Matrix;
    public var spread: SpreadMethod;
-   public var interp:Interpolatioflashthod;
+   public var interp:InterpolationMethod;
    public var focus:Float;
 
 }

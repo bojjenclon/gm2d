@@ -81,7 +81,7 @@ class GfxBytes extends Gfx
    static var capsStyles = [ CapsStyle.ROUND, CapsStyle.NONE, CapsStyle.SQUARE ];
    static var jointStyles = [ JointStyle.ROUND, JointStyle.MITER, JointStyle.BEVEL ];
    static var spreadMethods = [ SpreadMethod.PAD, SpreadMethod.REPEAT, SpreadMethod.REFLECT ];
-   static var interpolatioflashthods = [ Interpolatioflashthod.RGB, Interpolatioflashthod.LINEAR_RGB ];
+   static var interpolatioflashthods = [ InterpolationMethod.RGB, InterpolationMethod.LINEAR_RGB ];
    static var gradientTypes = [ GradientType.LINEAR, GradientType.RADIAL ];
 
    public function iterate(inGfx:Gfx)
