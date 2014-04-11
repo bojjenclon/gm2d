@@ -1,9 +1,9 @@
 package gm2d.icons;
 
-import nme.display.Graphics;
-import nme.display.Graphics;
-import nme.display.LineScaleMode;
-import nme.geom.Matrix;
+import flash.display.Graphics;
+import flash.display.Graphics;
+import flash.display.LineScaleMode;
+import flash.geom.Matrix;
 
 
 class Document extends Icon

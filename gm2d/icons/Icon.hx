@@ -1,8 +1,8 @@
 package gm2d.icons;
 
-import nme.display.Graphics;
-import nme.display.BitmapData;
-import nme.geom.Matrix;
+import flash.display.Graphics;
+import flash.display.BitmapData;
+import flash.geom.Matrix;
 
 class Icon
 {
@@ -21,7 +21,7 @@ class Icon
       var bmp = new BitmapData( Std.int(width*scale+0.99), Std.int(height*scale+0.99),
         true, gm2d.RGB.CLEAR);
 
-      var shape = new nme.display.Shape();
+      var shape = new flash.display.Shape();
       render(shape.graphics);
       var m = new Matrix();
       m.scale(scale,scale);

@@ -2,7 +2,7 @@ package gm2d.icons;
 
 import gm2d.gfx.GfxBytes;
 import gm2d.gfx.GfxGraphics;
-import nme.display.Graphics;
+import flash.display.Graphics;
 
 
 class NorthSouth extends Icon
