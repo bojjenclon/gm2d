@@ -3,7 +3,7 @@ package gm2d.gfx;
 import flash.geom.Matrix;
 import flash.display.GradientType;
 import flash.display.SpreadMethod;
-import flash.display.Interpolatioflashthod;
+import flash.display.InterpolationMethod;
 import flash.display.CapsStyle;
 import flash.display.JointStyle;
 import flash.display.LineScaleMode;
