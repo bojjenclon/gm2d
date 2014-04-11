@@ -3,12 +3,12 @@ package gm2d.svg;
 import Xml;
 import gm2d.svg.PathParser;
 import gm2d.svg.PathSegment;
-import nme.geom.Matrix;
-import nme.geom.Rectangle;
-import nme.display.GradientType;
-import nme.display.SpreadMethod;
-import nme.display.CapsStyle;
-import nme.display.JointStyle;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
+import flash.display.GradientType;
+import flash.display.SpreadMethod;
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
 
 import gm2d.svg.Grad;
 import gm2d.svg.Group;

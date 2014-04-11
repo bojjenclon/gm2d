@@ -1,7 +1,7 @@
 package gm2d.svg;
 
-import nme.geom.Matrix;
-import nme.geom.Rectangle;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
 
 class RenderContext
 {

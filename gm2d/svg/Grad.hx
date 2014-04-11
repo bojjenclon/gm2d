@@ -1,14 +1,14 @@
 package gm2d.svg;
 
-import nme.geom.Matrix;
-import nme.geom.Rectangle;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
 
-import nme.display.GradientType;
-import nme.display.SpreadMethod;
-import nme.display.InterpolationMethod;
-import nme.display.CapsStyle;
-import nme.display.JointStyle;
-import nme.display.LineScaleMode;
+import flash.display.GradientType;
+import flash.display.SpreadMethod;
+import flash.display.Interpolatioflashthod;
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
 
 class Grad extends gm2d.gfx.Gradient
 {

@@ -2,11 +2,11 @@ package gm2d.svg;
 
 import gm2d.reso.Resources;
 import gm2d.svg.SvgRenderer;
-import nme.geom.Matrix;
+import flash.geom.Matrix;
 
-import nme.display.Shape;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
+import flash.display.Shape;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
 
 typedef BitmapDataHash = haxe.ds.StringMap<BitmapData>;
 
@@ -35,7 +35,7 @@ class BitmapDataManager
       var h = Std.int(svg.height*inScale +  0.99);
       var bmp = new BitmapData(w,h,true,RGB.ZERO);
       var q = gm2d.Lib.current.stage.quality;
-      gm2d.Lib.current.stage.quality = nme.display.StageQuality.BEST;
+      gm2d.Lib.current.stage.quality = flash.display.StageQuality.BEST;
       bmp.draw(shape,matrix);
       gm2d.Lib.current.stage.quality = q;
 
